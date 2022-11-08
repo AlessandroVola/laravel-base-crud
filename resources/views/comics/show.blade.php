@@ -4,13 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Comics</title>
+    <title>{{ $comic->title }}</title>
 </head>
 <body>
-    @foreach($comics as $comic)
-        <div>
-            <a href="{{ route('comics.show', $comic->id) }}"> {{ $comic->title }} </a>
-        </div>
-    @endforeach
+    <h1>{{ $comic->title }}</h1>
+    <div>
+        <img src="{{ $comic->thumb }}" alt="{{ $comic->title }} cover">
+    </div>
+    <p>{{ $comic->description }}</p>
 </body>
 </html>
