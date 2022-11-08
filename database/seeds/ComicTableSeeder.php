@@ -13,7 +13,7 @@ class ComicTableSeeder extends Seeder
     public function run()
     {
         //
-        $comics = config('data.comics');
+        $comics = config('comics');
 
         foreach($comics as $model){
             $comic = new Comic();
@@ -25,6 +25,6 @@ class ComicTableSeeder extends Seeder
             $comic->sale_date = $model['sale_date'];
             $comic->type = $model['type'];
             $comic->save();
-        };
+         }
     }
 }
