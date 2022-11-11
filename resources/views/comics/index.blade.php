@@ -7,6 +7,11 @@
     <title>Comics</title>
 </head>
 <body>
+    <div>
+        <a href="{{ route('comics.create') }}">Aggiungi nuovo Comic</a>
+    </div>
+
+
     @foreach($comics as $comic)
         <div>
             <a href="{{ route('comics.show', $comic->id) }}"> {{ $comic->title }} </a>
